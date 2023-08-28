@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="Web Icon" >
     <title>Lediel & Grace Wedding</title>
 
     <link rel="stylesheet" href="main.css"/>
@@ -40,6 +42,10 @@
                 </div>
             </div>
         </div>
+        <div class="input-container">
+            <input type="text" id="code" class="input-text" autocomplete="off">
+            <label for="code" class="label"> Enter Code </label>
+        </div>
     </header>
     <script>
         // Set the date we're counting down to (date hr:min:sec)
@@ -67,7 +73,7 @@
                 document.getElementById("minutes").innerHTML = minutes;
                 document.getElementById("seconds").innerHTML = seconds;
 
-                // If the count down is over
+                // If the countdown is over
                 if (distance < 0) {
                     clearInterval(x);
                     document.getElementById("days").innerHTML = "00";
