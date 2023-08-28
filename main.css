@@ -62,7 +62,7 @@ header .signName span {
 header .landing-page {
     position: relative;
     z-index: 1;
-    width: 400px;
+    width: 300px;
     height: 175px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -71,9 +71,13 @@ header .landing-page {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
+header .landing-page:hover {
+    border: 2px solid navy;
+}
+
 /*I Do*/
 header .landing-page h2 {
-    color: navy;
+    color: #fff;
     font-size: 15px;
     font-weight: 300;
     margin-top: 30px;
@@ -85,19 +89,17 @@ header .landing-page span {
 
 /*Wedding Date*/
 header .landing-page h1 {
-    color: navy;
-    font-size: 30px;
+    color: #fff;
+    font-size: 25px;
     font-weight: 500;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
-
 
 .countdown {
     display: flex;
     color: #fff;
     text-shadow: 0px 0px 20px #000;
 }
-
 
 .countdown div {
     flex-basis: 200px;
@@ -116,57 +118,3 @@ header .landing-page h1 {
     margin-bottom: -9px;  
     font-weight: 100;                        
 }
-
-/*Enter Invitation Code*/
-header .input-container {
-    width: 200px;
-    position: relative;
-    margin-top: 20px;
-}
-
-header .input-text {
-    position: relative;
-    padding: 15px 15px;
-    width: 100%;
-    height: 100%;
-    background: rgb(255, 255, 255, 0.6);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    outline: none;
-    transition: all 100ms;
-    color: #000;
-    font-size: 15px;
-}
-
-.label {
-    position: absolute;
-    top: 14px;
-    left: 15px;
-    padding: 0 2px;
-    transition: all 50ms;
-    z-index: 1;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.label::before {
-    content: "";
-    height: 5;
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 100%;
-    z-index: -1;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-header .input-text:focus {
-    border: 2px solid navy;
-}
-
-header .input-text:focus +  .label {
-    top: 5px;
-    color: navy;
-    font-size: 10px;
-}
-
