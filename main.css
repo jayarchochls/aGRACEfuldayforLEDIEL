@@ -23,8 +23,7 @@ header {
     position: relative;
 }
 
-header:before {
-    
+header:before {   
     background-color: rgba(78, 62, 52, 0.5);
 }
 
@@ -45,10 +44,10 @@ header .signName {
 
     font-family: 'Brittany Signature', sans-serif;
     font-weight: 500;
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
     letter-spacing: 3px;
 
-    text-shadow: 0px 0px 20px #000;
+    text-shadow: 5px 5px 30px #000;
 }
 
 header .signName p {
@@ -57,144 +56,117 @@ header .signName p {
 }
 
 header .signName span {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 header .landing-page {
     position: relative;
     z-index: 1;
+    width: 400px;
+    height: 175px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
+/*I Do*/
 header .landing-page h2 {
-    color: #fff;
+    color: navy;
     font-size: 15px;
     font-weight: 300;
+    margin-top: 30px;
 }
 
 header .landing-page span {
     font-weight: 700;
 }
 
-@media screen and (min-width: 480px) {
-    header .landing-page h2 {
-        font-size: 15px;
-    }
-}
-  
-@media screen and (min-width: 720px) {
-    header .landing-page h2 {
-        font-size: 17.5px;
-    }
-}
-  
-@media screen and (min-width: 1024px) {
-    header .landing-page h2 {
-        font-size: 20px;
-    }
-}
-  
-@media screen and (min-width: 1280px) {
-    header .landing-page h2 {
-        font-size: 22.5px;
-    }
-}
-
+/*Wedding Date*/
 header .landing-page h1 {
-    color: #fff;
+    color: navy;
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 5px;
 }
 
-@media screen and (min-width: 480px) {
-    header .landing-page h1 {
-        font-size: 30px;
-    }
-}
-  
-@media screen and (min-width: 720px) {
-    header .landing-page h1 {
-        font-size: 35px;
-    }
-}
-  
-@media screen and (min-width: 1024px) {
-    header .landing-page h1 {
-        font-size: 40px;
-    }
-}
-  
-@media screen and (min-width: 1280px) {
-    header .landing-page h1 {
-        font-size: 45px;
-    }
-}
 
 .countdown {
     display: flex;
+    color: #fff;
+    text-shadow: 0px 0px 20px #000;
 }
+
 
 .countdown div {
     flex-basis: 200px;
 }
 
+/*countdown numbers*/
 .countdown p {
-    font-size: 60px;
+    font-size: 40px;
     margin-bottom: -9px;  
     font-weight: 300;                        
 }
 
-@media screen and (min-width: 480px) {
-    header .countdown p {
-        font-size: 40px;
-    }
-}
-  
-@media screen and (min-width: 720px) {
-    header .countdown p {
-        font-size: 46.6px;
-    }
-}
-  
-@media screen and (min-width: 1024px) {
-    header .countdown p {
-        font-size: 53.3px;
-    }
-}
-  
-@media screen and (min-width: 1280px) {
-    header .countdown p {
-        font-size: 60px;
-    }
-}
-
+/*Days Hours Minutes Seconds*/
 .countdown span {
     font-size: 10px;
     margin-bottom: -9px;  
     font-weight: 100;                        
 }
 
-@media screen and (min-width: 480px) {
-    header .countdown span {
-        font-size: 10px;
-    }
+/*Enter Invitation Code*/
+header .input-container {
+    width: 200px;
+    position: relative;
+    margin-top: 20px;
 }
-  
-@media screen and (min-width: 720px) {
-    header .countdown span {
-        font-size: 13.3px;
-    }
+
+header .input-text {
+    position: relative;
+    padding: 15px 15px;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    outline: none;
+    transition: all 100ms;
+    color: #000;
+    font-size: 15px;
 }
-  
-@media screen and (min-width: 1024px) {
-    header .countdown span {
-        font-size: 16.6px;
-    }
+
+.label {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    padding: 0 2px;
+    transition: all 50ms;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.5);
 }
-  
-@media screen and (min-width: 1280px) {
-    header .countdown span {
-        font-size: 20px;
-    }
+
+.label::before {
+    content: "";
+    height: 5;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 100%;
+    z-index: -1;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+header .input-text:focus {
+    border: 2px solid navy;
+}
+
+header .input-text:focus +  .label {
+    top: 5px;
+    color: navy;
+    font-size: 10px;
 }
 
