@@ -69,6 +69,8 @@ header .landing-page {
     border-radius: 20px;
     backdrop-filter: blur(1px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+
 }
 
 header .landing-page:hover {
@@ -81,6 +83,8 @@ header .landing-page h2 {
     font-size: 15px;
     font-weight: 300;
     margin-top: 30px;
+
+    font-size: clamp(0.9375rem, 0.9375rem + 0vw, 0.9375rem);
 }
 
 header .landing-page span {
@@ -93,6 +97,8 @@ header .landing-page h1 {
     font-size: 25px;
     font-weight: 500;
     letter-spacing: 3px;
+
+    font-size: clamp(1.5625rem, 1.5625rem + 0vw, 1.5625rem);
 }
 
 /*countdown numbers*/
@@ -110,14 +116,18 @@ header .landing-page h1 {
 .countdown p {
     font-size: 40px;
     margin-bottom: -9px;  
-    font-weight: 300;                        
+    font-weight: 300;  
+    
+    font-size: clamp(2.5rem, 2.5rem + 0vw, 2.5rem);
 }
 
 /*Days Hours Minutes Seconds*/
 .countdown span {
     font-size: 10px;
     margin-bottom: -9px;  
-    font-weight: 100;                        
+    font-weight: 100;   
+    
+    font-size: clamp(0.625rem, 0.625rem + 0vw, 0.625rem);
 }
 
 @media screen and (min-width: 480px) {
@@ -128,6 +138,12 @@ header .landing-page h1 {
 
 @media screen and (min-width: 720px) {
     header .landing-page {
-        width: 30%;
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    header .landing-page {
+        width: 45%;
     }
 }
